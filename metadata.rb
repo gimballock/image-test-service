@@ -1,0 +1,11 @@
+name 'test-service'
+maintainer 'Eric Price'
+maintainer_email 'eprice@datapipe.com'
+source_url 'https://github.datapipe.net/automation/image-test-service'
+issues_url 'https://github.datapipe.net/automation/image-test-service/issues'
+license 'All Rights Reserved'
+description 'This is an image test and build suite that includes x, y and z'
+long_description 'Now I'm going to write a longer description...'
+version '0.1.0'
+
+supports 'redhat'
