@@ -5,8 +5,8 @@
     "image_version" : "DEV",
     "image_name" : "test-service",
     "aws_region": "us-west-2",
-    "ami_id": "ami-7df0bd4d",
-    "instance_type": "t2.medium"
+    "ami_id": "ami-11125e21",
+    "instance_type": "m3.medium"
   },
   "builders": [
     {
