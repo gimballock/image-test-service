@@ -5,7 +5,6 @@
     "build_timestamp": "{{isotime \"20060102150405\"}}",
     "git_revision": "__unknown_git_revision__",
     "headless": "",
-    "metadata": "bento/floppy/dummy_metadata.json",
     "mirror": "https://content-web.rhn.redhat.com/rhn/isos/rhel-6.6/md5sum/ef031b0ae8458d6489eb277ba1dcb5de",
     "name": "rhel-6.6",
     "template": "rhel-6.6-x86_64",
@@ -59,15 +58,9 @@
   ],
   "provisioners": [
     {
-      "destination": "/tmp/bento-metadata.json",
-      "source": "{{user `metadata`}}",
-      "type": "file"
-    },
-    {
       "environment_vars": [],
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "scripts": [
-        "bento/scripts/common/metadata.sh",
         "bento/scripts/centos/networking.sh",
         "bento/scripts/common/sshd.sh",
         "bento/scripts/common/vagrant.sh",

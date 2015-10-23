@@ -1,22 +1,22 @@
 {
-  "variables": {
+    "variables": {
     "image_version" : "DEV",
     "image_name" : "test-service",
     "aws_region": "us-west-2",
+    "ami_regions": ["eu-central-1", "us-west-1"],
     "ami_id": "ami-11125e21",
-    "instance_type": "t2.medium",
-    "ssh_timeout" : "10m"
+    "instance_type": "t2.medium"
   },
   "builders": [
     {
       "type": "amazon-ebs",
       "region": "{{user `aws_region`}}",
-      "ami_regions": ["eu-central-1", "us-west-1"],
+      "ami_regions": "{{user `ami_regions`}}",
       "source_ami": "{{user `ami_id`}}",
       "instance_type": "{{user `instance_type`}}",
       "ssh_username": "ec2-user",
       "ssh_pty": true,
-      "ssh_timeout" : "10m",
+      "ssh_timeout": "10m",
       "ami_name": "test-service-{{user `image_version`}}-{{timestamp}}",
       "ami_description": "This is an image test and build suite that includes x, y and z"
     }

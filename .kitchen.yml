@@ -6,8 +6,10 @@ provisioner:
   name: chef_solo
 
 platforms:
-  - name: ubuntu-14.04
-  - name: centos-7.1
+  - name: rhel-6.5
+    driver:
+      box: datapipeRHEL65
+      box_url: https://s3-us-west-2.amazonaws.com/packages.dualspark.com/dev/vagrant/rhel-6.5.virtualbox.box
 
 suites:
   - name: default
